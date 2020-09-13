@@ -23,7 +23,7 @@ services:
     image: postgres:11.9-alpine
     environment:
       POSTGRES_USER: root
-      POSTGRES_PASWORD: root
+      POSTGRES_PASSWORD: root
       POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
     ports:
     - "5432:5432"
