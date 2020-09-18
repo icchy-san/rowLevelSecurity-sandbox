@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTenants extends Migration
+class CreateTenantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateTenants extends Migration
     public function up()
     {
         Schema::create('tenants', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name')->comment('テナント名');
             $table->timestamps();
         });
