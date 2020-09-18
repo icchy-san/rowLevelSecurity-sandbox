@@ -17,7 +17,7 @@ services:
     ports:
     - '8000:8000'
     volumes:
-    - ./app:/var/www/html/app
+    - ./app:/var/www/html/app:cached
     depends_on:
     - postgres
 
