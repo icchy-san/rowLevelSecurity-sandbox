@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class UserController extends Controller
 {
-    public function __invoke($id)
+    public function __invoke(\Illuminate\Http\Request $request)
     {
-        return view('user', ['user'=>User::FindOrFail($id)]);
+        Config::set('database.connections.pgsql.application_name', $request->header('tenant_id'));
+        $user = User::all();
+        return view('user', ['user' => $user]);
     }
 }
