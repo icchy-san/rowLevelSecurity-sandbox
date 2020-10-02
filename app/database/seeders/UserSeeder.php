@@ -33,6 +33,38 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => Str::random(10),
+                'email' => 'test3@gmail.com',
+                'password' => Hash::make('password'),
+                'tenant_id' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => Str::random(10),
+                'email' => 'test4@gmail.com',
+                'password' => Hash::make('password'),
+                'tenant_id' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => Str::random(10),
+                'email' => 'test5@gmail.com',
+                'password' => Hash::make('password'),
+                'tenant_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => Str::random(10),
+                'email' => 'test6@gmail.com',
+                'password' => Hash::make('password'),
+                'tenant_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
